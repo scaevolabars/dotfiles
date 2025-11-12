@@ -1,0 +1,9 @@
+# Lazy.nvim lockfile (optional - remove if you want to track versions)
+# lazy-lock.json
+
+# macOS
+.DS_Store
+
+# Lua LSP cache
+.luarc.json
+lua/.luarc.json

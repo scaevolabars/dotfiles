@@ -36,29 +36,49 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
+			-- Configure lua_ls
+			vim.lsp.config.lua_ls = {
+				cmd = { "lua-language-server" },
+				root_markers = { ".luarc.json", ".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml", ".git" },
 				capabilities = capabilities,
-			})
-			lspconfig.basedpyright.setup({
+			}
+
+			-- Configure basedpyright
+			vim.lsp.config.basedpyright = {
+				cmd = { "basedpyright-langserver", "--stdio" },
+				root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", ".git" },
 				capabilities = capabilities,
 				settings = {
 					basedpyright = {
 						disableOrganizeImports = true,
 					},
 					python = {
-						analysys = {
+						analysis = {
 							ignore = { "*" },
 						},
 					},
 				},
-			})
-			lspconfig.ruff.setup({
+			}
+
+			-- Configure ruff
+			vim.lsp.config.ruff = {
+				cmd = { "ruff", "server" },
+				root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", ".git" },
 				capabilities = capabilities,
-			})
-			lspconfig.clangd.setup({
+			}
+
+			-- Configure clangd
+			vim.lsp.config.clangd = {
+				cmd = { "clangd" },
+				root_markers = { "compile_commands.json", "compile_flags.txt", ".git" },
 				capabilities = capabilities,
-			})
+			}
+
+			-- Enable LSP servers
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("basedpyright")
+			vim.lsp.enable("ruff")
+			vim.lsp.enable("clangd")
 
 			vim.diagnostic.config({
 				virtual_text = {
