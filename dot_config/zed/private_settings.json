@@ -7,7 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "disable_ai": true,
+  "project_panel": {
+    "dock": "left",
+    "file_icons": true,
+    "default_width": 240.0
+  },
   "agent": {
+    "dock": "right",
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
@@ -18,48 +34,102 @@
   "icon_theme": "Catppuccin Mocha",
   "ssh_connections": [
     {
-      "host": "dagster.gcp.whitecircle",
+      "host": "uat",
       "args": [],
       "projects": [
         {
           "paths": [
-            "/home/deevs/auto-deevs/./"
+            "/home/admin/ssbars/nautilus_strategy"
+          ]
+        },
+        {
+          "paths": [
+            "/home/barsegjanse/scaevolabars/00-hello-world"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ssbars/hyp-mm"
+          ]
+        },
+        {
+          "paths": [
+            "/home/xroad/xroad"
+          ]
+        },
+        {
+          "paths": [
+            "/home/xroad/xroad/current/./"
           ]
         }
       ]
     },
     {
-      "host": "deevs.gcp.whitecircle",
+      "host": "xroad",
       "args": [],
       "projects": [
         {
           "paths": [
-            "/home/deevs/backtesting"
+            "/home/xroad/strats_prod_py"
           ]
         },
         {
           "paths": [
-            "/home/deevs/fixes/./"
+            "/home/xroad/xroad/current"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "host": "ysda-gpu",
+      "args": [],
+      "projects": [
         {
           "paths": [
-            "/home/deevs/path-2-postgres"
+            "/home/barsegjanse/scaevolabars/./"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "host": "nu1",
+      "args": [],
+      "projects": []
+    },
+    {
+      "host": "nu2",
+      "args": [],
+      "projects": [
         {
           "paths": [
-            "/home/deevs/personal/HSE/distsys-hse/./"
+            "/home/admin/ssbars"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "host": "uat-ssbars",
+      "args": [],
+      "projects": [
         {
           "paths": [
-            "/home/deevs/personal/HSE/prom-prog"
+            "/home/sbarsegyan/xroad-grid-quoter"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "host": "edoras",
+      "args": [],
+      "projects": []
+    },
+    {
+      "host": "vm-dev-tokyo",
+      "args": [],
+      "projects": [
         {
           "paths": [
-            "/home/deevs/personal/HSE/shad-rust"
+            "/home/ubuntu/mm-poc"
           ]
         }
       ]
